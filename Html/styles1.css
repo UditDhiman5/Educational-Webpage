@@ -1,0 +1,114 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas : 
+    "navbar navbar"
+    "sidebar main"
+    "footer footer";
+}
+nav{
+    grid-area : navbar;
+    background-color: #0099ff;
+}
+aside{
+    height: 100vh;
+    top: 53px;
+    grid-area : sidebar;
+    background-color: #a1a1a1;
+}
+main{
+    grid-area : main;
+}
+footer{
+    grid-area : footer;
+    background-color: rgb(0, 0, 0);
+}
+#head{
+    display: grid;
+    background: #0099ff;
+    width: 100vw;
+    grid-template-columns : 1fr 1fr 1fr;
+    grid-template-areas : 
+    "head1 head2 head3";
+}
+.head1{
+    grid-area: head1;
+}
+.head2{
+    grid-area: head2;
+    padding-left: 140px;
+    font-size : 20px;
+}
+.head2 h2{
+    font-family: "Satisfy", cursive;
+    padding-top : 7px; 
+    position: relative;
+}
+.head3{
+    padding : 15px 10px;
+    padding-left : 170px ;
+    position: relative;
+    grid-area: head3;
+}
+ul{
+    list-style: none;
+    background: #0099ff;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration : none;
+    text-align: center;
+    font-size : 20px;
+}
+ul li ul.dropdown li {
+    display : block;
+}
+ul li ul.dropdown{
+    width : 100%;
+    background: #0369ad;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: #0369ad;
+}
+ul li:hover ul.dropdown{
+    display : block;
+    background: #0199ff;
+}
+.content{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows : 1fr 1fr 1fr;
+    grid-template-areas : 
+    "b1 b2 b3"
+    "b4 b5 b6";
+    padding : 10px 10px 10px 10px;
+}
+.content .block1,.block2,.block3{
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    border :rgb(0, 0, 0) solid 1px;
+    border-radius : 10px;
+    margin: 15px;
+} 
+.content p{
+    text-decoration: none;
+    display : block;
+}
+

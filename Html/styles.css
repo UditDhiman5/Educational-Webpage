@@ -1,0 +1,77 @@
+.satisfy-regular{
+    font-family: "Satify", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    scroll-behavior: smooth;
+}
+*{
+    margin : 0;
+    padding : 0;
+    font-family: monospace;
+}
+body{
+    display: grid;
+    grid-template-columns : 300px 1fr ;
+    grid-template-areas : 
+    "navbar navbar"
+    "siderbar main"
+    "footer footer"
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+    background: #0099ff;
+    position: fixed;
+    width: 100vw;
+}
+.head2 h2{
+    font-family: "Satisfy", cursive;
+    padding-top : 7px; 
+    position: relative;
+}
+.head3{
+    padding : 15px 10px;
+    position: relative;
+}
+ul{
+    list-style: none;
+    background: #0099ff;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration : none;
+    text-align: center;
+    font-size : 20px;
+}
+ul li ul.dropdown li {
+    display : block;
+}
+ul li ul.dropdown{
+    width : 100%;
+    background: #0369ad;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: #0369ad;
+}
+ul li:hover ul.dropdown{
+    display : block;
+    background: #0199ff;
+}
+div.list{
+    width: 25%;
+    background : rgb(218, 215, 215);
+}
+div.content{
+    width: 75%;
+}
